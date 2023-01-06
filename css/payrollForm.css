@@ -145,6 +145,7 @@ select {
 /*uc6*/
 .buttonparent {
     display: flex;
+    flex-direction: row;
     margin-bottom: 10px;
     justify-content: space-between;
     margin-top: 20px;
@@ -169,10 +170,11 @@ select {
     border: none;
     background-color: #f5f5ff;
     margin-right: 20px;
+    border: 1px solid #707070;
 }
 
 .cancelbutton {
-    /* margin-left: 140px; */
+    margin-left: 140px;
     text-decoration: none;
     text-align: center;
 }
