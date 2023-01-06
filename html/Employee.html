@@ -8,6 +8,7 @@
     <link href="../css/payrollForm.css" rel="stylesheet">
     <title>Employee Payroll Form</title>
 </head>
+
 <body>
     <header class="header-content">
         <div>
@@ -27,7 +28,7 @@
             <div class="form-head">Employee PayRoll Form</div>
             <div class="row-content">
                 <label class="label text" for "name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="your name" required>            
+                <input class="input" type="text" id="name" name="name" placeholder="your name" required>
             </div>
             <div class="row-content">
                 <label class="label text" for "profile">Profile Pic</label>
@@ -76,35 +77,100 @@
                     <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="engineer">
                     <label class="text" for="engineer">Engineer</label>
                     <input class="checkbox" type="checkbox" id="others" name="others" value="others">
-                    <label class="text" for="others">Others</label>            
+                    <label class="text" for="others">Others</label>
                 </div>
             </div>
-                <div class="row-content">
-                    <label class="label text" for "salary">Salary</label>
-                    <label for="salary">Choose your salary in range</label>
-                    <input type="range" id="salary" name="salary" min="300000" max="700000" step="100" />
-                    <output class="salary-output" for="Salary">Rs.7,00,000</output>
-                </div>
-                <script>
-                    const text = document.querySelector('#name');
-                    const textError = document.querySelector('.text-error');
-                    text.addEventListener('input', function () {
-                        let nameRegex = new RegExp('^[A-Z]{1}[a-z]{2,}$');
-                        if (nameRegex.test(text.value)) {
-                            textError.textContent = "";
-                        } else {
-                            textError.textContent =
-                                "Name should have min 3 characters and start with Capital letters.";
-                        }
-                    });
-                    const salary = document.querySelector('#salary');
-                    const output = document.querySelector('.salary-output');
+            <div class="row-content">
+                <label class="label text" for "salary">Salary</label>
+                <label for="salary">Choose your salary in range</label>
+                <input type="range" id="salary" name="salary" min="300000" max="700000" step="100" />
+                <output class="salary-output" for="Salary">Rs.7,00,000</output>
+            </div>
+            <script>
+                const text = document.querySelector('#name');
+                const textError = document.querySelector('.text-error');
+                text.addEventListener('input', function () {
+                    let nameRegex = new RegExp('^[A-Z]{1}[a-z]{2,}$');
+                    if (nameRegex.test(text.value)) {
+                        textError.textContent = "";
+                    } else {
+                        textError.textContent =
+                            "Name should have min 3 characters and start with Capital letters.";
+                    }
+                });
+                const salary = document.querySelector('#salary');
+                const output = document.querySelector('.salary-output');
+                output.textContent = salary.value;
+                salary.addEventListener('input', function () {
                     output.textContent = salary.value;
-                    salary.addEventListener('input', function () {
-                        output.textContent = salary.value;
-                    })
-                </script>
+                })
+            </script>
+            <!-- uc-05 -->
+            <div class="row-content">
+                <label class="label text" for "start-Date">Start Date</label>
+                <div>
+                <select id="day" name="Day">
+                    <option value="Day">Day</option>
+                        <option value='01'>01</option>
+                        <option value='02'>02</option>
+                        <option value='03'>03</option>
+                        <option value='04'>04</option>
+                        <option value='05'>05</option>
+                        <option value='06'>06</option>
+                        <option value='07'>07</option>
+                        <option value='08'>08</option>
+                        <option value='09'>09</option>
+                        <option value='10'>10</option>
+                        <option value='11'>11</option>
+                        <option value='12'>12</option>
+                        <option value='13'>13</option>
+                        <option value='14'>14</option>
+                        <option value='15'>15</option>
+                        <option value='16'>16</option>
+                        <option value='17'>17</option>
+                        <option value='18'>18</option>
+                        <option value='19'>19</option>
+                        <option value='20'>20</option>
+                        <option value='21'>21</option>
+                        <option value='22'>22</option>
+                        <option value='23'>23</option>
+                        <option value='24'>24</option>
+                        <option value='25'>25</option>
+                        <option value='26'>26</option>
+                        <option value='27'>27</option>
+                        <option value='28'>28</option>
+                        <option value='29'>29</option>
+                        <option value='30'>30</option>
+                        <option value='31'>31</option>
+                    </select>
+  
+                    <select id="month" name="Month">
+                        <option value="Month">Month</option>
+                        <option value='01'>January</option>
+                        <option value='02'>February</option>
+                        <option value='03'>March</option>
+                        <option value='04'>April</option>
+                        <option value='05'>May</option>
+                        <option value='06'>June</option>
+                        <option value='07'>July</option>
+                        <option value='08'>August</option>
+                        <option value='09'>September</option>
+                        <option value='10'>October</option>
+                        <option value='11'>November</option>
+                        <option value='12'>December</option>
+                    </select>
+                    <select id="year" name="Year">
+                        <option value="Year">Year</option>
+                        <option value='2023'>2023</option>
+                        <option value='2022'>2022</option>
+                        <option value='2021'>2021</option>
+                        <option value='2020'>2020</option>
+                        <option value='2019'>2019</option>
+                    </select>
+                </div>
+            </div>
         </form>
     </div>
 </body>
+
 </html>
