@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    height: 100%;
+}   
+.header {
+    padding: 15px 0;
+    background-color: #ffff;
+}   
+.header-content {
+    display: flex;
+    flex-direction: row;   
+    border: 0px solid green;
+}   
+.logo-content {
+    display: flex;
+    flex-direction:row;
+    vertical-align: left;
+    border: 0px solid green;
+    width: 1px;
+}   
+.logo-content-img {
+    vertical-align: middle;
+    width: 50px;
+height: 50px;
+}  
+.items{
+    padding: 30px;
+}
+.emptext {
+    font: normal normal bold 20px/25px Monserrat;
+    font-family: "Monserrat", sans-serif;
+    letter-spacing: 0px;
+    color: #82a70c;
+    text-transform: capitalize;
+}   
+.emp-payroll {
+    color: #42515f;
+}
+* {
+    box-sizing: border-box;
+} 
