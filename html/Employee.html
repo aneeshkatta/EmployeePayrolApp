@@ -8,7 +8,6 @@
     <link href="../css/payrollForm.css" rel="stylesheet">
     <title>Employee Payroll Form</title>
 </head>
-
 <body>
     <header class="header-content">
         <div>
@@ -21,14 +20,40 @@
             </div>
 
         </div>
-        
+
     </header>
     <div class="form-content">
         <form class="form" action="#" onsubmit="save();return false">
             <div class="form-head">Employee PayRoll Form</div>
             <div class="row-content">
                 <label class="label text" for "name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="your name" required>
+                <input class="input" type="text" id="name" name="name" placeholder="your name" required>            
+            </div>
+            <div class="row-content">
+                <label class="label text" for "profile">Profile Pic</label>
+                <div class="profile-radio-content">
+                    <label>
+                        <input type="radio" id="profile1" name="profile" value="../" required>
+                        <img class="profile" id="image1" src="../assets/assets/profile-images/Ellipse -1.png">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile2" name="profile" value="../" required>
+                        <img class="profile" id="image1" src="../assets/assets/profile-images/Ellipse -2.png">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile3" name="profile" value="../" required>
+                        <img class="profile" id="image1" src="../assets/assets/profile-images/Ellipse -3.png">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile4" name="profile" value="../" required>
+                        <img class="profile" id="image1" src="../assets/assets/profile-images/Ellipse -4.png">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile5" name="profile" value="../" required>
+                        <img class="profile" id="image1" src="../assets/assets/profile-images/Ellipse -5.png">
+                    </label>
+                </div>
+
             </div>
         </form>
     </div>
