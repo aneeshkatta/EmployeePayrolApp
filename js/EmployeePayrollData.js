@@ -113,3 +113,11 @@ const getSelectedvalues=(propertyValue)=>{
     });
     return selItems;
 }
+const  getInputValueById=id=>{
+    let value =document.querySelector(id).value;
+    return value;
+}
+const getInputValueByValue=id=>{
+    let value=getInputValueById(id).value;
+    return value;
+}
