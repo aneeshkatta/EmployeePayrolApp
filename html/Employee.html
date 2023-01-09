@@ -29,6 +29,7 @@
             <div class="row-content">
                 <label class="label text" for "name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="your name" required>
+                <error-output class="text-error" for="name">Name should have min 3 characters and start with Capital letters.</error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for "profile">Profile Pic</label>
@@ -181,7 +182,17 @@
             </div>
         </div>
         </form>
-    </div>
-</body>
-
+    </div id='formid' class='form-content'>
+    <!-- uc2 Dy46 -->
+    <form class="form" action="#"  onreset="resetform()" onsubmit="save()">
+        <div class="form-head">
+            <label class="label text" for "name">Name</label>
+           <input class="input" type="'text" id="name" placeholder="your name.." required>
+           <error-output class="text-error" for "text" ></error-output>
+            
+        </div>
+    <script src="../js/EmployeePayrollData.js"></script>
+    </body>
 </html>
+
+

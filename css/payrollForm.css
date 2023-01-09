@@ -188,3 +188,14 @@ select {
         padding: 44px 20px;
     }
 }
+
+/* day 46 uc1*/
+
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+
+}
+
