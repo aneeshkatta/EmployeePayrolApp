@@ -32,6 +32,5 @@ class EmployeePayrollData {
             this.startDate.toLocaleDateString("en-US", options);
         return "id=" + this.id + ", name=" + this.name + ", gender=" + this.gender + + ", Profilepic" + Profilepic+", department=" + this.department + ", salary=" + this.salary + ", startDate=" + empjoineddate ;
     }
-
 }
 
