@@ -27,12 +27,12 @@
         <form class="form" action="#" onsubmit="save();return false">
             <div class="form-head">Employee PayRoll Form</div>
             <div class="row-content">
-                <label class="label text" for "name">Name</label>
+                <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="your name" required>
                 <error-output class="text-error" for="name">Name should have min 3 characters and start with Capital letters.</error-output>
             </div>
             <div class="row-content">
-                <label class="label text" for "profile">Profile Pic</label>
+                <label class="label text" for="profile">Profile Pic</label>
                 <div class="profile-radio-content">
                     <label>
                         <input type="radio" id="profile1" name="profile" value="../" required>
@@ -58,16 +58,16 @@
 
             </div>
             <div class="row-content">
-                <label class="label text" for "Gender">Gender</label>
+                <label class="label text" for="gender">Gender</label>
                 <div>
                     <input type="radio" id="male" name="gender" value="male">
-                    <label class="text" for "male">Male</label>
+                    <label class="text" for="male">Male</label>
                     <input type="radio" id="female" name="gender" value="female">
-                    <label class="text" for "female">female</label>
+                    <label class="text" for= "female">female</label>
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for "department">Department</label>
+                <label class="label text" for ="department">Department</label>
                 <div>
                     <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
                     <label class="text" for="hr">HR</label>
@@ -82,10 +82,10 @@
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for "salary">Salary</label>
+                <label class="label text" for ="salary">Salary</label>
                 <label for="salary">Choose your salary in range</label>
                 <input type="range" id="salary" name="salary" min="300000" max="700000" step="100" />
-                <output class="salary-output" for="Salary">Rs.7,00,000</output>
+                <output class="salary-output" for="salary">Rs.7,00,000</output>
             </div>
             <script>
                 const text = document.querySelector('#name');
@@ -108,7 +108,7 @@
             </script>
             <!-- uc-05 -->
             <div class="row-content">
-                <label class="label text" for "start-Date">Start Date</label>
+                <label class="label text" for "start-date">Start Date</label>
                 <div>
                 <select id="day" name="Day">
                     <option value="Day">Day</option>
@@ -172,7 +172,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for "notes">Notes</label>
-                <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
+                <textarea id="notes" class="input" name="notes" placeholder="" style="height:100px"></textarea>
             </div>
             <div class="buttonparent">
             <a href="./Employee.html" class="resetbutton button cancelbutton">Cancel</a>
