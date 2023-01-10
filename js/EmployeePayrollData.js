@@ -32,18 +32,5 @@ class EmployeePayrollData {
             this.startDate.toLocaleDateString("en-US", options);
         return "id=" + this.id + ", name=" + this.name + ", gender=" + this.gender + + ", Profilepic" + Profilepic+", department=" + this.department + ", salary=" + this.salary + ", startDate=" + empjoineddate ;
     }
-
 }
 
-
-// function CreateAndUpdateStorage(employeePayrollData) {
-//     let employeePayrolllist = new JSON.parse(localStorage.getItem("EmployeePayrolllist"));
-//     if (employeePayrolllist != undefined) {
-//         employeePayrolllist.push(employeePayrollData);
-//     }
-//     else {
-//         employeePayrolllist = [employeePayrollData];
-//     }
-//     alert(employeePayrolllist.toString());
-//     localStorage.setItem("EmployeePayrolllist", JSON.stringify(employeePayrolllist));
-// }
