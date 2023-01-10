@@ -35,15 +35,3 @@ class EmployeePayrollData {
 
 }
 
-
-// function CreateAndUpdateStorage(employeePayrollData) {
-//     let employeePayrolllist = new JSON.parse(localStorage.getItem("EmployeePayrolllist"));
-//     if (employeePayrolllist != undefined) {
-//         employeePayrolllist.push(employeePayrollData);
-//     }
-//     else {
-//         employeePayrolllist = [employeePayrollData];
-//     }
-//     alert(employeePayrolllist.toString());
-//     localStorage.setItem("EmployeePayrolllist", JSON.stringify(employeePayrolllist));
-// }
