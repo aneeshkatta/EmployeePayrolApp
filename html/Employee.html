@@ -29,7 +29,7 @@
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="your name" required>
-                <error-output class="text-error" for="name">Name should have min 3 characters and start with Capital letters.</error-output>
+                <error-output class="text-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="profile">Profile Pic</label>
@@ -87,28 +87,10 @@
                 <input type="range" id="salary" name="salary" min="300000" max="700000" step="100" />
                 <output class="salary-output" for="salary">Rs.7,00,000</output>
             </div>
-            <script>
-                const text = document.querySelector('#name');
-                const textError = document.querySelector('.text-error');
-                text.addEventListener('input', function () {
-                    let nameRegex = new RegExp('^[A-Z]{1}[a-z]{2,}$');
-                    if (nameRegex.test(text.value)) {
-                        textError.textContent = "";
-                    } else {
-                        textError.textContent =
-                            "Name should have min 3 characters and start with Capital letters.";
-                    }
-                });
-                const salary = document.querySelector('#salary');
-                const output = document.querySelector('.salary-output');
-                output.textContent = salary.value;
-                salary.addEventListener('input', function () {
-                    output.textContent = salary.value;
-                })
-            </script>
+           
             <!-- uc-05 -->
             <div class="row-content">
-                <label class="label text" for "start-date">Start Date</label>
+                <label class="label text" for="start-date">Start Date</label>
                 <div>
                 <select id="day" name="Day">
                     <option value="Day">Day</option>
@@ -168,11 +150,13 @@
                         <option value='2020'>2020</option>
                         <option value='2019'>2019</option>
                     </select>
+                    <error-output class="text-error" for="text"></error-output>
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for "notes">Notes</label>
+                <label class="label text" for="notes">Notes</label>
                 <textarea id="notes" class="input" name="notes" placeholder="" style="height:100px"></textarea>
+             
             </div>
             <div class="buttonparent">
             <a href="./Employee.html" class="resetbutton button cancelbutton">Cancel</a>
@@ -183,15 +167,8 @@
         </div>
         </form>
     </div id='formid' class='form-content'>
-    <!-- uc2 Dy46 -->
-    <form class="form" action="#"  onreset="resetform()" onsubmit="save()">
-        <div class="form-head">
-            <label class="label text" for "name">Name</label>
-           <input class="input" type="'text" id="name" placeholder="your name.." required>
-           <error-output class="text-error" for "text" ></error-output>
-            
-        </div>
     <script src="../js/EmployeePayrollData.js"></script>
+    <script src="../js/EmployeePayrollName&SalaryEventListener.js"></script>
     </body>
 </html>
 
