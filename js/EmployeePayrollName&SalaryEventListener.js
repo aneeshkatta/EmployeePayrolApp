@@ -35,6 +35,7 @@ window.addEventListener('DOMContentLoaded',(event)=>
 const save = () => {
     try {
         let employeePayrollData = createEmployeePayroll();
+        createAndUpdateStorage(employeePayrollData);
     } catch (e) {
         return;
     }
@@ -81,4 +82,16 @@ const setTextValue=(id,value)=>
 {
     const element= document.querySelector(id);
     element.textContent=value;
+}
+// Day46 uc04
+function createAndUpdateStorage(employeePayrollData) {
+    let employeePayrolllist =JSON.parse(localStorage.getItem("EmployeePayrolllist"));
+    if (employeePayrolllist != undefined) {
+        employeePayrolllist.push(employeePayrollData);
+    }
+    else {
+        employeePayrolllist = [employeePayrollData];
+    }
+    alert(employeePayrolllist.toString());
+    localStorage.setItem("EmployeePayrolllist", JSON.stringify(employeePayrolllist));
 }
