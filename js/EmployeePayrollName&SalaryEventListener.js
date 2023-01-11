@@ -21,25 +21,7 @@ window.addEventListener('DOMContentLoaded',(event)=>
             textError.textContent=e;
         }
     });
-    const startDate=document.querySelector('#startDate');
-    const DatetextError = document.querySelector('.text-error');
-    name.addEventListener('input',function()
-    {
-        if(startDate.value.length==0)
-        {
-            DatetextError.textContent="";
-            return;
-        }
-        try
-        {
-            (new EmployeePayrollData()).name=startDate.value;
-            DatetextError.textContent="";
-        }
-        catch(e)
-        {
-            DatetextError.textContent=e;
-        }
-    });
+   
     const salary = document.querySelector('#salary');
     const output = document.querySelector('.salary-output');
     output.textContent = salary.value;
@@ -52,33 +34,28 @@ window.addEventListener('DOMContentLoaded',(event)=>
 /* D46 uc3*/
 const save = () => {
     try {
-        let employeePayrollData = new createEmployeePayroll();//
-        // CreateAndUpdateStorage(employeePayrollData);
-
+        let employeePayrollData = createEmployeePayroll();
     } catch (e) {
         return;
     }
 }
 const createEmployeePayroll = () => {
-    let employeePayrollData = new EmployeePayrollData();
+     employeePayrollData = new EmployeePayrollData();
     try {
         employeePayrollData.name = getInputValueById('#name');
 
     } catch (e) {
-        SetTextValue('.textError', e);
+        setTextValue('.textError', e);
         throw e;
     }
 
-    employeePayrollData.Profilepic = getSelectedvalues('[name=Profilepic]'.pop());
-    // employeePayrollData.name=getSelectedvalues('[name=name]'.pop());
-    employeePayrollData.gender = getSelectedvalues('[name=gender]'.pop());
+    employeePayrollData.profilePic = getSelectedvalues('[name=profile]').pop();
+    employeePayrollData.gender = getSelectedvalues('[name=gender]').pop();
+    employeePayrollData.department = getSelectedvalues('[name=department]').pop();
     employeePayrollData.salary = getInputValueById('#salary');
-
+    employeePayrollData.note = getInputValueById('#note');
     let date = getInputValueById('#day') + " " + getInputValueById('#month') + " " + getInputValueById('#year');
-    employeePayrollData.startDate = new Date(date);
-    employeePayrollData.notes = getInputValueById('#notes');
-    employeePayrollData.Department = getSelectedvalues('[name=Department]');
-
+    employeePayrollData.startdate = new Date(date);
     alert(employeePayrollData.toString());
     return employeePayrollData;
 }
@@ -86,18 +63,22 @@ const getSelectedvalues = (propertyValue) => {
     let allItems = document.querySelectorAll(propertyValue);
     let selItems = [];
     allItems.forEach(item => {
-        if (item.checked) {
+        if (item.checked) 
             selItems.push(item.value);
-        }
     });
     return selItems;
 }
 
-const getInputValueById = id => {
+const getInputValueById = (id) => {
     let value = document.querySelector(id).value;
     return value;
 }
-const getInputValueByValue = id => {
+const getInputElementValue = (id) => {
     let value = getInputValueById(id).value;
     return value;
+}
+const setTextValue=(id,value)=>
+{
+    const element= document.querySelector(id);
+    element.textContent=value;
 }

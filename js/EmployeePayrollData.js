@@ -12,9 +12,9 @@ class EmployeePayrollData {
         else throw 'Name is incorrect'
 
     }
-    get Profilepic() { return this._Profilepic; }
-    set Profilepic(Profilepic) {
-        this.Profilepic = Profilepic;
+    get profilePic() { return this._profilePic; }
+    set profilePic(profilePic) {
+        this._profilePic = profilePic;
     }
     get gender() { return this._gender; }
     set gender(gender) { this._gender = gender; }
@@ -24,13 +24,13 @@ class EmployeePayrollData {
     set salary(salary) { this._salary = salary; }
     get note() { return this._note; }
     set note(note) { this._note = note; }  
-    get startDate() { return this._startDate; }
-    set startDate(startDate) {  
-    this._startDate = startDate; }
+    get startdate() { return this._startdate; }
+    set startdate(startdate) {  
+    this._startdate = startdate; }
     toString() {
         const options = { day: 'numeric', month: 'long', year: 'numeric' };
-        const empjoineddate = !this.startDate ? undefined :
-            this.startDate.toLocaleDateString("en-gb", options);
-        return "id=" + this.id + ", name=" + this.name + ", gender=" + this.gender + + ", Profilepic" + Profilepic+", department=" + this.department + ", salary=" + this.salary + ", startDate=" + empjoineddate ;
+        const empjoineddate = !this.startdate ? undefined :
+            this.startdate.toLocaleDateString("en-gb", options);
+        return " id=" + this.id +" name=" + this.name + ", gender=" + this.gender + + ", profilePic" + this.profilePic+", department=" + this.department + ", salary=" + this.salary + ", startdate=" + empjoineddate +" Note=" + this.note ;
     }  
 }
