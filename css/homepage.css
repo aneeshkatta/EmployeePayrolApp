@@ -21,7 +21,8 @@ body {
     vertical-align: left;
     border: 0px solid green;
     width: 1px;
-    Font: normal normal bold 20px/23px roboto;
+    Font: normal normal bold 20px/23px Roboto;
+    color: green;
 }
 
 .logo-content-img {
@@ -159,4 +160,21 @@ td img{
     display: inline-block;
     font-weight: 300;
     margin-bottom: 8px;
+}
+tr:not(:first-child){
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+}
+td{
+    font: normal normal normal 14px/21px Roboto;
+    letter-spacing: 0px;
+    color: #3d3d3d;
+    opacity: 1;
+}
+td{
+    font :normal normal normal 14px/21px Roboto;
+    letter-spacing: 0px;
+    color: #3d3d3d;
+    opacity: 1;
 }
