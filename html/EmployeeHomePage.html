@@ -10,7 +10,6 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script dfr src="../js/newhome.js"></script>
     <title>Employee PayRoll App</title>
 </head>
 
@@ -29,37 +28,45 @@
         <!-- uc2 -->
         <div class="header-content">
             <div class="emp-detail-text">Employee Details
-                <div class="Employee-count"></div>
+                <div class="Employee-count">10</div>
             </div>
             <a href="../html/Employee.html" class="add-button">
                 <img src="../assets/assets/icons/add-24px.svg" alt="">Add user</a>
 
         </div>
     </div>
-    <table id="display" class="table">
-        <!-- uc3 -->
-        <tr>
-            <th></th>    
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Department</th>
-            <th>Salary</th>
-            <th>Start Date</th>
-            <th>Actions</th>
-        </tr>
-        <tr>
-            <td><img class="profile" alt="" src="../assets/assets/profile-images/Ellipse -2.png"></td>
-            <td> Narayan Mahadevan</td>
-            <td>Male</td>
-            <td><div>HR</div><div>Finance</div></td>
-            <td>300000</td>
-            <td>1 nov 2020</td>
-            <td>
-                <img id="1" onclick="remove(this)" alt="delete" src="../assets/assets/icons/delete-black-18dp.svg">
-                <img id="1" onclick="update(this)" alt="edit" src="../assets/assets/icons/create-black-18dp.svg">
-            </td>
-        </tr>
-    </table>
-    <script src="../js/newhome.js"></script>
+    <div class="table-main">
+        <table id="table-display" class="table">
+            <!-- uc3 -->
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Start Date</th>
+                <th>Actions</th>
+            </tr>   
+
+            <tr>
+                <td><img class="profile" alt="" src="../assets/assets/profile-images/Ellipse -2.png"></td>
+                <td> Narayan Mahadevan</td>
+                <td>Male</td>
+                <td>
+                    <div>HR</div>
+                    <div>Finance</div>
+                </td>
+                <td>300000</td>
+                <td>1 nov 2020</td>
+                <td>
+                    <img id="1" onclick="remove(this)" alt="delete" src="../assets/assets/icons/delete-black-18dp.svg">
+                    <img id="1" onclick="update(this)" alt="edit" src="../assets/assets/icons/create-black-18dp.svg">
+                </td>
+            </tr>
+        </div>
+        </table>
+        <script  src="../js/EmployeePayrollData.js"></script>
+        <script  src="../js/EmployeePayrollName&SalaryEventListener.js"></script>
 </body>
+
 </html>
