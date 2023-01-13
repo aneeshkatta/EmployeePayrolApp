@@ -186,10 +186,7 @@ const createInnerHtml = () => {
             <td><img class="profile" alt="" src="${employeePayrollData._profilePic}"></td>
             <td> ${employeePayrollData._name}</td>
             <td>${employeePayrollData._gender}</td>
-            <td>
-             ${employeePayrollData._department}
-              
-            </td>
+            <td  class ="dept-label">${employeePayrollData._department}</td>
             <td>${employeePayrollData._salary}</td>
             <td>${employeePayrollData._startdate}</td>
             <td>
