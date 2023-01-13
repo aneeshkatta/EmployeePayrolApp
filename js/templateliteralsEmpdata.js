@@ -154,3 +154,9 @@ const createEmployeePayrollJSON = () => {
         ];
     return employeePayrolllistLocal;
 }
+const getDeptHtml=(deptList)=>{
+    for (const dept of deptList) {
+        deptHtml=`${deptHtml}<div class='dept-label>${dept}</div>`
+    }
+    return deptHtml;
+}
