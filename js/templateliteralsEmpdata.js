@@ -186,7 +186,10 @@ const createInnerHtml = () => {
             <td><img class="profile" alt="" src="${employeePayrollData._profilePic}"></td>
             <td> ${employeePayrollData._name}</td>
             <td>${employeePayrollData._gender}</td>
-            <td  class ="dept-label">${employeePayrollData._department}</td>
+            <td>
+                <div>${getDeptHtml(employeePayrollData._department)}</div>
+             
+            </td>
             <td>${employeePayrollData._salary}</td>
             <td>${employeePayrollData._startdate}</td>
             <td>
@@ -197,4 +200,57 @@ const createInnerHtml = () => {
         `;
     }
     document.querySelector('#table-display').innerHTML = innerHtml;
+}
+
+const createEmployeePayrollJSON = () => {
+    let employeePayrolllistLocal =
+        [
+            {
+                "_name": 'Anish',
+                "_gender": 'male',
+                "_department": ['sales', 'Finance'],
+                "_salary": '500000',
+                "_note": '',
+                "_startdate": '29 oct 2019',
+                "_id": new Date().getTime(),
+                "_profilePic": '../assets/assets/profile-images/Ellipse -2.png'
+            },
+            {
+                "_name": 'vinay',
+                "_gender": 'male',
+                "_department": ['sales', 'Finance'],
+                "_salary": '500000',
+                "_note": '',
+                "_startdate": '29 oct 2019',
+                "_id": new Date().getTime()+1,
+                "_profilePic": '../assets/assets/profile-images/Ellipse -2.png'
+            },
+            {
+                "_name": 'Raju',
+                "_gender": 'male',
+                "_department": ['sales', 'Finance'],
+                "_salary": '500000',
+                "_note": '',
+                "_startdate": '29 oct 2019',
+                "_id": new Date().getTime(),
+                "_profilePic": '../assets/assets/profile-images/Ellipse -2.png'
+            },
+            {
+                "_name": 'mahesh',
+                "_gender": 'male',
+                "_department": ['sales', 'Finance'],
+                "_salary": '500000',
+                "_note": '',
+                "_startdate": '29 oct 2019',
+                "_id": new Date().getTime()+1,
+                "_profilePic": '../assets/assets/profile-images/Ellipse -2.png'
+            }
+        ];
+    return employeePayrolllistLocal;
+}
+const getDeptHtml=(deptList)=>{
+    for (const dept of deptList) {
+        deptHtml=`${deptHtml}<div class='dept-label>${dept}</div>`
+    }
+    return deptHtml;
 }
