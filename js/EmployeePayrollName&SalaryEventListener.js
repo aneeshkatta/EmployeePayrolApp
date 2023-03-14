@@ -1,4 +1,3 @@
-
 //Day46_uc2//
 window.addEventListener('DOMContentLoaded', (event) => {
     const name = document.querySelector('#name');
@@ -41,13 +40,13 @@ const createEmployeePayroll = () => {
         employeePayrollData.name = getInputValueById('#name');
 
     } catch (e) {
-        setTextValue('.textError', e);
+        setTextValue('.text-error', e);
         throw e;
     }
 
     employeePayrollData.profilePic = getSelectedvalues('[name=profile]').pop();
     employeePayrollData.gender = getSelectedvalues('[name=gender]').pop();
-    employeePayrollData.department = getSelectedvalues('[name=department]').pop();
+    employeePayrollData.department = getSelectedvalues('[name=department]');
     employeePayrollData.salary = getInputValueById('#salary');
     employeePayrollData.note = getInputValueById('#note');
     let date = getInputValueById('#day') + " " + getInputValueById('#month') + " " + getInputValueById('#year');

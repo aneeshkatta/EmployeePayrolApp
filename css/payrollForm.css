@@ -23,6 +23,7 @@ body {
     width: 1px;
     Font: normal normal bold 20px/23px Roboto;
     color: green;
+   
 }
 
 .logo-content-img {
@@ -142,7 +143,7 @@ select {
 }
 
 /*uc6*/
-.buttonparent {
+.buttonParent {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
@@ -197,6 +198,4 @@ error-output{
     color: red;
 
 }
-
-
 
